@@ -93,11 +93,13 @@
 			seed = W
 			to_chat(user, "You load [W] into [src].")
 		return
+	if(default_unfasten_wrench(user, W, 20))
+		return
+//	if(default_deconstruction_screwdriver(user, W))
+//		return
+//	if(default_deconstruction_crowbar(user, W))
+//		return
 
-	if(default_deconstruction_screwdriver(user, W))
-		return
-	if(default_deconstruction_crowbar(user, W))
-		return
 	if(istype(W,/obj/item/weapon/disk/botany))
 		if(loaded_disk)
 			to_chat(user, "There is already a data disk loaded.")
